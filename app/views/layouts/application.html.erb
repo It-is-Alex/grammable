@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Grammable</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>Grammable</title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
 
-<%= yield %>
+		<% if notice.present? %>
+  		<p class="alert alert-info"><%= notice %></p>
+		<% end %>
 
-</body>
+		<% if alert.present? %>
+  		<p class="alert alert-danger"><%= alert %></p>
+		<% end %>
+		<%= yield %>
+
+	</body>
 </html>
