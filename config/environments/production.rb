@@ -1,6 +1,6 @@
 Grammable::Application.configure do
 
-  config.action_mailer.default_url_options = { host: ''}
+  config.action_mailer.default_url_options = { host: 'https://grammable-alex-adamo.herokuapp.com/'}
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
